@@ -18,6 +18,14 @@ section {
   margin-bottom: 4rem;
 }
 
+p {
+  font-size: 2.2rem;
+  color: #333;
+  margin-top: 0.5rem;
+  font-weight: 500;
+  color: grey;
+}
+
 /* ===================================
    GRID DE PRODUTOS E CARDS (Estrutura .ofertas)
    =================================== */
