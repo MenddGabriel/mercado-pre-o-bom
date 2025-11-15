@@ -1,5 +1,3 @@
-/* index.css - Estilos principais do site */
-
 /*  SEÇÕES */
 main {
   padding: 3rem 2rem;
@@ -41,9 +39,50 @@ section p {
   line-height: 1.7;
 }
 
-/* -------------------------------
-   RESPONSIVIDADE
---------------------------------*/
+#carrossel {
+  position: relative;
+  width: 90%;
+  max-width: 900px;
+  margin: 40px auto;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  aspect-ratio: 16 / 9;
+  list-style: none;
+  padding: 0;
+}
+
+.listas {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.imagem {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 700ms ease-in-out;
+  width: 100%;
+  height: 100%;
+}
+
+/* imagem Ativa */
+.imagem[data-active] {
+  opacity: 1;
+  z-index: 10;
+}
+
+.imagem img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 @media (max-width: 992px) {
   header {
     flex-direction: column;
@@ -69,123 +108,30 @@ section p {
   main {
     padding: 2rem 1rem;
   }
-}
 
-@media (max-width: 480px) {
-  nav ul {
-    flex-direction: column;
-    gap: 0.8rem;
+  #carrossel-simples {
+    max-width: 100%;
+    margin: 20px 0;
+    border-radius: 0;
   }
 
-  header h1 {
-    font-size: 1.5rem;
+  @media (max-width: 480px) {
+    nav ul {
+      flex-direction: column;
+      gap: 0.8rem;
+    }
+
+    header h1 {
+      font-size: 1.5rem;
+    }
+
+    #logo {
+      width: 70px;
+    }
+
+    section h2,
+    section h3 {
+      font-size: 1.7rem;
+    }
   }
-
-  #logo {
-    width: 70px;
-  }
-
-  section h2,
-  section h3 {
-    font-size: 1.7rem;
-  }
-}
-/* Grade de produtos */
-.produtos {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-  margin-top: 2rem;
-}
-
-.produtos section {
-  background: #fff;
-  border-radius: 15px;
-  padding: 1.5rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-}
-
-.produtos section:hover {
-  transform: translateY(-6px);
-}
-
-.produtos img {
-  width: 100%;
-  border-radius: 12px;
-  margin-bottom: 1rem;
-}
-
-/* Ofertas */
-.ofertas {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1.8rem;
-  margin-top: 2rem;
-}
-
-.ofertas section {
-  background: #fff;
-  border-radius: 12px;
-  padding: 1.5rem;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  transition: transform 0.3s ease;
-}
-
-.ofertas section:hover {
-  transform: scale(1.05);
-}
-
-.ofertas .preco {
-  color: #0044ff;
-  font-weight: 700;
-  font-size: 1.3rem;
-}
-
-/* Contato */
-.contato-form {
-  max-width: 480px;
-  margin: 2rem auto;
-  text-align: left;
-}
-
-.contato-form form {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.contato-form input,
-.contato-form textarea {
-  width: 100%;
-  padding: 0.8rem;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  font-size: 1rem;
-}
-
-.contato-form button {
-  background-color: #0044ff;
-  color: #fff;
-  padding: 0.9rem;
-  border: none;
-  border-radius: 8px;
-  font-size: 1.1rem;
-  cursor: pointer;
-}
-
-.contato-form button:hover {
-  background-color: #0036c7;
-}
-
-/* Mapa */
-.mapa iframe {
-  border-radius: 10px;
-  margin-top: 1.5rem;
-}
-
-/* Página ativa */
-nav a.ativo {
-  color: #ffd000;
 }

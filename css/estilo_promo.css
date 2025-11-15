@@ -1,0 +1,100 @@
+/* -------------------------------
+   RESET E BASE (Mantenha o seu código aqui)
+--------------------------------*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  padding: 3rem 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+section {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+/* ===================================
+   GRID DE PRODUTOS E CARDS (Estrutura .ofertas)
+   =================================== */
+
+/* Container do Grid: .ofertas (Corresponde a <section class="ofertas">) */
+.ofertas {
+  display: grid;
+  /* Adapta-se a colunas de no mínimo 220px */
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+  padding: 0 1rem;
+}
+
+/* Card Individual (Corresponde às <section> aninhadas) */
+.ofertas section {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  /* Sombra e Transição */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s;
+  /* Ajuste para altura igual */
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.ofertas section:hover {
+  transform: translateY(-5px); /* Efeito de elevação sutil */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.ofertas section h3 {
+  font-size: 1.3rem;
+  color: #000;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+/* Estiliza o preço antigo (dentro do <p> com a tag <del>) */
+.ofertas section p del {
+  color: #777;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+/* Preço de Oferta (Corresponde a <p class="preco">) */
+.ofertas .preco {
+  color: #ff0000; /* Destaque principal em vermelho */
+  font-weight: 800;
+  font-size: 2rem;
+  padding-top: 10px;
+  border-top: 1px dashed #eee; /* Linha divisória */
+  margin-top: 10px;
+}
+
+/* ===================================
+   RESPONSIVIDADE
+   =================================== */
+
+@media (max-width: 768px) {
+  .ofertas {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .ofertas {
+    /* Em mobile, apenas uma coluna */
+    grid-template-columns: 1fr;
+  }
+  .ofertas .preco {
+    font-size: 1.8rem;
+  }
+}

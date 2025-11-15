@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contato - Mercado Preço Bom</title>
     <link rel="stylesheet" href="/css/estilo_geral.css" />
-    <link rel="stylesheet" href="/css/estilo_index.css" />
+    <link rel="stylesheet" href="/css/estilo_contact.css" />
   </head>
   <body>
     <header>
@@ -35,7 +35,7 @@
       </section>
 
       <section class="contato-form">
-        <form>
+        <form id="form-contato">
           <label for="nome">Nome:</label>
           <input
             id="nome"
@@ -45,12 +45,7 @@
           />
 
           <label for="email">E-mail:</label>
-          <input
-            id="email"
-            type="email"
-            placeholder="seuemail@exemplo.com"
-            required
-          />
+          <input id="email" type="email" placeholder="seuemail@exemplo.com" />
 
           <label for="msg">Mensagem:</label>
           <textarea
@@ -67,5 +62,7 @@
     <footer>
       <p>&copy; 2025 Mercado preço bom. Todos os direitos reservados.</p>
     </footer>
+    <!-- Importa o JS separado -->
+    <script src="../java_script/contato.js" defer></script>
   </body>
 </html>
