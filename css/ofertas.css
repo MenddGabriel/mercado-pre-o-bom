@@ -31,10 +31,10 @@ p {
   font-weight: bold;
 }
 
-/* Container do Grid*/
+/* Container*/
 .ofertas {
   display: grid;
-  /* Adapta-se a colunas de no mínimo 220px */
+
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 2rem;
   margin-top: 2rem;
@@ -46,11 +46,11 @@ p {
   background: #fff;
   border-radius: 12px;
   padding: 1.5rem;
-  /* Sombra e Transição */
+  /* Sombra */
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s;
-  /* Ajuste para altura igual */
+  /* altura  */
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -58,7 +58,7 @@ p {
 }
 
 .ofertas section:hover {
-  transform: translateY(-5px); /* Efeito de elevação sutil */
+  transform: translateY(-5px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 

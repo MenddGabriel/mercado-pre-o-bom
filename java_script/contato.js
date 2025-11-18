@@ -9,11 +9,13 @@ document.addEventListener("DOMContentLoaded", () => {
   // Adiciona o listener de envio do formulário
   form.addEventListener("submit", function (event) {
     event.preventDefault(); // Impede o envio do formulário vazio
+
+    //pega o conteudo preenchido
     const nome = document.getElementById("nome").value;
     const email = document.getElementById("email").value;
     const msg = document.getElementById("msg").value;
 
-    const telefone = "5548991149054";
+    const telefone = "5548991149054"; //numero do whatsapp
 
     // Monta a mensagem
     const texto = `*Contato pelo site*\n

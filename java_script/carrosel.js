@@ -18,11 +18,13 @@ document.addEventListener("DOMContentLoaded", () => {
     // busca slide ativo
     const activeSlide = slidesList.querySelector(".imagem[data-active]");
 
-    // Pega todas as imagens
+    // Pega todas as imagens e converte para lista
     const slides = [...slidesList.querySelectorAll(".imagem")];
 
+    //calcular o proximo slide
     let newIndex = slides.indexOf(activeSlide) + 1;
 
+    //verifica se esta no ultimo slide
     if (newIndex >= slides.length) {
       newIndex = 0;
     }
@@ -31,6 +33,6 @@ document.addEventListener("DOMContentLoaded", () => {
     delete activeSlide.dataset.active;
     slides[newIndex].dataset.active = true;
   }
-
+  //tempo para avancar o slide
   setInterval(showNextSlide, 5000);
 });
